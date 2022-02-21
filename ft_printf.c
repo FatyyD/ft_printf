@@ -6,7 +6,7 @@
 /*   By: fadiallo <fadiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 15:31:14 by fadiallo          #+#    #+#             */
-/*   Updated: 2022/02/21 18:33:04 by fadiallo         ###   ########.fr       */
+/*   Updated: 2022/02/21 21:00:22 by fadiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,9 @@ int ft_printf(const char *format, ...)
 					st = va_arg(ap, char *);
 					ft_putstr(st, &count);
 				}
-				else if (*format == 'd' || *format == 'i')
+				else if (format[k] == 'd' || format[k] == 'i')
 				i = va_arg(ap, int);
-				ft_putdec()	
+				ft_putdec(i, &count);	
 			}
 			/*else if (*format == 'u')
 			i = va_arg(ap , unsigned int);

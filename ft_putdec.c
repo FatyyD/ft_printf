@@ -6,7 +6,7 @@
 /*   By: fadiallo <fadiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 16:25:59 by fadiallo          #+#    #+#             */
-/*   Updated: 2022/02/21 19:17:00 by fadiallo         ###   ########.fr       */
+/*   Updated: 2022/02/21 20:57:18 by fadiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 void    ft_putdec(int i,int *count)
 {
     if ( i >= '0' && i <= '9')
-        ft_putchar(nb + '0', &count);
+        ft_putchar(i + '0', count);
     
     else if (i < 0 && i != -2147483648)
 	{
-		ft_putchar('-');
-		ft_putdec(i* (-1);
+		ft_putchar(i + '-', count);
+		ft_putdec(i* (-1), count);
 	}
 	else
 	{
-		ft_putdec(nb / 10);
-		ft_putdec(nb % 10);
+		ft_putdec(i / 10, count);
+		ft_putdec(i % 10, count);
 	}
 
 }
