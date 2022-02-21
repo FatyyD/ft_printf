@@ -6,14 +6,17 @@
 /*   By: fadiallo <fadiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 16:25:41 by fadiallo          #+#    #+#             */
-/*   Updated: 2022/02/14 18:00:23 by fadiallo         ###   ########.fr       */
+/*   Updated: 2022/02/21 18:28:21 by fadiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-void    ft_putstr(char *str)
+void    ft_putstr(char *s, int *count)
 {
     while(*s)
-    write(1, str++, 1);
+    {
+        ft_putchar(*s, count);
+        s++;
+    }
 }

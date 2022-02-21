@@ -8,6 +8,6 @@
 
 void    ft_putchar(char c, int *count);
 int ft_printf(const char *format, ...);
-void    ft_putstr(char *str);
+void    ft_putstr(char *s, int *count);
 
 #endif
