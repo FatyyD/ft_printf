@@ -12,12 +12,7 @@
 
 #include "printf"
 
-void    ft_printint(unsigned int n, int base,  int *count)
+void    ft_printin_dec(int i, int count)
 {
-    char *str;
-    
-    while (n!= 0)
-    {
-              *str        
-    }
+   
 }
