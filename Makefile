@@ -6,7 +6,7 @@
 #    By: fadiallo <fadiallo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/14 15:23:55 by fadiallo          #+#    #+#              #
-#    Updated: 2022/02/21 19:38:25 by fadiallo         ###   ########.fr        #
+#    Updated: 2022/02/22 20:30:17 by fadiallo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ CFLAGS = -Wall -Wextra -Werror
 SRC = ft_prinft.c \
 	ft_putchar.c \
 	ft_putstr.c \
-	ft_putdec.c
+	ft_printint
 	
 OBJ = $(SRC:.c=.o)
 
