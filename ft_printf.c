@@ -15,7 +15,7 @@
 int ft_printf(const char *format, ...)
 {
 		va_list ap;
-		unsigned int i;
+	    int i;
 		int count;
 		int k;
 		char *st;
@@ -44,17 +44,20 @@ int ft_printf(const char *format, ...)
 				else if (format[k] == 'd' || format[k] == 'i')
 			 	{
 					i = va_arg(ap, int);
-					ft_printint(i, &count);
+					ft_putnbr(i, &count);
 				}	
-				else if (*format == 'u')
+				else if (format[k] == 'u')
 				{
 					i = va_arg(ap , unsigned int);
-					ft_printdec(i, &count);
-				}/*
-			else if (*format == 'p')
-			i = va_arg(ap, int);
-			else if (*format == 'x' || *format ==  'X')
-			i = va_arg(ap, int); */
+					ft_putnbr(i, &count);
+				}
+				else if (format[k] == 'x' || format[k] ==  'X')
+				{
+					i = va_arg(ap, unsigned int);
+					ft_putnbr(i, &count);
+					ft_conver(i, 16, &count);
+				}
+			}
 			k++;
 		}       
 		va_end(ap);

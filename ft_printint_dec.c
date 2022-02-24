@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf"
+/* #include "printf"
 
 void    ft_printin_dec(int i, int count)
 {
-   
+
 }
