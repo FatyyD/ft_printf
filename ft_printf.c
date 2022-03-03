@@ -54,8 +54,7 @@ int ft_printf(const char *format, ...)
 				else if (format[k] == 'x' || format[k] ==  'X')
 				{
 					i = va_arg(ap, unsigned int);
-					ft_putnbr(i, &count);
-					ft_conver(i, 16, &count);
+					ft_conver(format);
 				}
 			}
 			k++;
