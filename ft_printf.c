@@ -51,10 +51,10 @@ int ft_printf(const char *format, ...)
 					i = va_arg(ap , unsigned int);
 					ft_putnbr(i, &count);
 				}
-				else if (format[k] == 'x' || format[k] ==  'X')
+				else if (format[k] == 'X' || format[k] == 'x')
 				{
-					i = va_arg(ap, unsigned int);
-					ft_conver(format);
+					i =va_arg(ap, unsigned int);
+					ft_hexa(format, &count);
 				}
 			}
 			k++;

@@ -3,6 +3,6 @@
 
 int main()
 {
-    printf("mon printf : %d\n", ft_printf("oui %x\n", 5));
-    printf("vrai printf : %d\n", printf("oui %x\n", 5));
+    printf("mon printf : %d\n", ft_printf("oui %X\n", -6));
+    printf("vrai printf : %d\n", printf("oui %X\n", -6));
 }
