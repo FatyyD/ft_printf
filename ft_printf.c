@@ -6,7 +6,7 @@
 /*   By: fadiallo <fadiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 15:31:14 by fadiallo          #+#    #+#             */
-/*   Updated: 2022/02/22 22:03:19 by fadiallo         ###   ########.fr       */
+/*   Updated: 2022/03/11 23:19:06 by fadiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int ft_printf(const char *format, ...)
 		int count;
 		int k;
 		char *st;
-		
+		void *p;
 		
 		k = 0;
 		va_start(ap, format);
@@ -54,9 +54,16 @@ int ft_printf(const char *format, ...)
 				else if (format[k] == 'x' || format[k] ==  'X')
 				{
 					i = va_arg(ap, unsigned int);
-					ft_putnbr(i, &count);
-					ft_conver(i, 16, &count);
+					ft_conver(i, "0123456789abcdef", &count);
 				}
+				else if (format[k] == 'p')
+				{
+					p = va_arg(ap, void *);
+					ft_putstr("0x", &count);
+					ft_ptr((unsigned long long)p, "0123456789abcdef", &count); 
+				}
+				else if (format[k] == '%')
+					ft_putchar('%', &count);
 			}
 			k++;
 		}       
