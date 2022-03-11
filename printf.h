@@ -10,9 +10,16 @@ void    ft_putchar(char c, int *count);
 int ft_printf(const char *format, ...);
 void    ft_putstr(char *s, int *count);
 void    ft_putnbr(int i,int *count);
+<<<<<<< HEAD
 void    ft_conver(unsigned long long n, char *base, int *count);
 void    ft_convermaj(int n, char *base, int *count);
 int ft_strlen(char *str);
 void    ft_ptr(unsigned long long n, char *base, int *count);
+=======
+void    ft_conver(int n, char *base, int *count);
+void    ft_convermaj(int n, char *base, int *count);
+int ft_strlen(char *str);
+void    ft_ptr(uintptr_t  n, char *base, int *count);
+>>>>>>> 45c2a191785c694f3deab3faa63f80a62101bf9f
 
 #endif
