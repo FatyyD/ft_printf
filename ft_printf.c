@@ -20,7 +20,6 @@ int ft_printf(const char *format, ...)
 		int k;
 		char *st;
 		
-		
 		k = 0;
 		va_start(ap, format);
 		count = 0;
@@ -53,9 +52,20 @@ int ft_printf(const char *format, ...)
 				}
 				else if (format[k] == 'X' || format[k] == 'x')
 				{
-					i =va_arg(ap, unsigned int);
-					ft_hexa(format, &count);
+					i = va_arg(ap, unsigned int);
+					if(format[k] == 'x')
+						ft_conver(i,"0123456789abcdef", &count);
+					if(format[k] == 'X')	
+						ft_convermaj(i, "0123456789ABCDEF", &count);
 				}
+				else if (format[k] == 'p')
+				{
+					i = va_arg(ap, int);
+					ft_putstr("Ox", &count);
+					ft_ptr((uintptr_t)i, "0123456789abcdef", &count); 
+				}
+				else if (format[k] == '%')
+					ft_putchar('%', &count);
 			}
 			k++;
 		}       
