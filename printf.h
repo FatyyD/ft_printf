@@ -6,7 +6,7 @@
 /*   By: fadiallo <fadiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 19:02:08 by fadiallo          #+#    #+#             */
-/*   Updated: 2022/03/14 19:25:50 by fadiallo         ###   ########.fr       */
+/*   Updated: 2022/03/14 19:49:30 by fadiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,3 @@ int		ft_undec(va_list ap, int *count);
 int		ft_hexa( va_list ap, const char *format, int *count);
 void	ft_converptr(unsigned long long n, char *base, int *count);
 
-#endif

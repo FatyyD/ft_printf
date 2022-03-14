@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -20,3 +21,15 @@ int	ft_dec(va_list ap, int *count)
 	ft_putnbr(n, count);
 	return (0);
 }
+=======
+#include "printf.h"
+
+int     ft_dec(va_list ap, int *count)
+{
+    int n;
+
+    n = va_arg(ap, int);
+    ft_putnbr(n, count);
+    return (0);
+}
+>>>>>>> 6fdbc08c28e413eaf52e51e4a9076ae43eeca702

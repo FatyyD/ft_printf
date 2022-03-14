@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -20,3 +21,15 @@ int	ft_str(va_list ap, int *count)
 	ft_putstr(st, count);
 	return (0);
 }
+=======
+#include "printf.h"
+
+int     ft_str(va_list ap, int *count)
+{
+    char st;
+
+    s = va_arg(st, char *);
+    ft_putstr(st, count);
+    return (0);
+}
+>>>>>>> 6fdbc08c28e413eaf52e51e4a9076ae43eeca702

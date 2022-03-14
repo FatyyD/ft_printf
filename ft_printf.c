@@ -28,7 +28,10 @@ int ft_printf(const char *format, ...)
 			else if (format[k] == '%')
 			{
 				k++;
+<<<<<<< HEAD
 				ft_format(&format[k], &count, ap);
+=======
+>>>>>>> 6fdbc08c28e413eaf52e51e4a9076ae43eeca702
 				/*if (format[k] == 'c')
 				{
 					i = va_arg(ap, int);
@@ -63,8 +66,13 @@ int ft_printf(const char *format, ...)
 					if(format[k] == 'x')
 						ft_conver(i,"0123456789abcdef", &count);
 					if(format[k] == 'X')	
+<<<<<<< HEAD
 					ft_convermaj(i, "0123456789ABCDEF", &count);
 				}
+=======
+						ft_convermaj(i, "0123456789ABCDEF", &count);
+				}*/
+>>>>>>> 6fdbc08c28e413eaf52e51e4a9076ae43eeca702
 				else if (format[k] == 'p')
 				{
 					i = va_arg(ap, int);
