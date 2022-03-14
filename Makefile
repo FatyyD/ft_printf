@@ -18,7 +18,6 @@ CFLAGS = -Wall -Wextra -Werror
 SRC = ft_prinft.c \
 	ft_putchar.c \
 	ft_putstr.c \
-	ft_printint
 	
 OBJ = $(SRC:.c=.o)
 

@@ -1,57 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_hexa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fadiallo <fadiallo@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/14 18:41:09 by fadiallo          #+#    #+#             */
+/*   Updated: 2022/03/14 18:48:39 by fadiallo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "printf.h"
 
-void    ft_conver(int n, char *base, int *count)
+int	ft_hexa(va_list ap, const char *format, int *count)
 {
-    if (n < 0)
-	{
-		ft_putchar('-', count);
-		ft_conver(n* (-1), base, count);
-	}
-   else if (n >= 16)
-    {
-       ft_conver(n / 16, base, count);
-       ft_conver(n % 16, base, count);
-       
-    }
-    else if (n >= 0 && n <= 9)
-    {
-        ft_putchar(n + '0', count);
-    }
-    else
-    {
-        ft_putchar(n - 10 + 'a', count);
-    }
-}
+	unsigned int	i;
 
-void    ft_convermaj(int n, char *base, int *count)
-{
-    if (n < 0)
-	{
-		ft_putchar('-', count);
-		ft_convermaj(n* (-1), base, count);
-	}
-   else if (n >= 16)
-    {
-       ft_convermaj(n / 16, base, count);
-       ft_convermaj(n % 16, base, count);
-       
-    }
-    else if (n >= 0 && n <= 9)
-    {
-        ft_putchar(n + '0', count);
-    }
-    else
-    {
-        ft_putchar(n - 10 + 'A', count);
-    }
+	i = va_arg(ap, unsigned int);
+	if (*format == 'x')
+		ft_convermin(i, "0123456789abcdef", count);
+	if (*format == 'X')
+		ft_convermaj(i, "0123456789ABCDEF", count);
+	return (0);
 }
-/*int    ft_hexa( const char *format, int *count)
-{
-    unsigned int i;
-
-        if (*format == 'x')
-            ft_conver(i, "0123456789abcdef", count);
-        if (*format == 'X')
-            ft_conver(i, "0123456789ABCDEF", count);
-     return (0);
-}*/

@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ptr.c                                           :+:      :+:    :+:   */
+/*   ft_str.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fadiallo <fadiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/14 18:49:00 by fadiallo          #+#    #+#             */
-/*   Updated: 2022/03/14 19:31:52 by fadiallo         ###   ########.fr       */
+/*   Created: 2022/03/14 18:56:27 by fadiallo          #+#    #+#             */
+/*   Updated: 2022/03/14 19:22:10 by fadiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
 
-void	ft_ptr(va_list ap, char *format, int *count)
+int	ft_str(va_list ap, int *count)
 {
-	int i;
+	char	*st;
 
-	i = va_arg(ap, int);
-	ft_putstr("Ox", count);
-	ft_converptr((unsigned long long)i, "0123456789abcdef", count);
+	st = va_arg(st, char *);
+	ft_putstr(st, count);
 	return (0);
 }
