@@ -10,9 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
-<<<<<<< HEAD
 int	ft_hexa(va_list ap, const char *format, int *count)
 {
 	unsigned int	i;

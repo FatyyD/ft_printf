@@ -15,9 +15,17 @@ NAME = libftprintf.a
 CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
-SRC = ft_prinft.c \
-	ft_putchar.c \
-	ft_putstr.c \
+SRC = ft_printf.c \
+	ft_char.c \
+	ft_conver.c \
+	ft_dec.c \
+	ft_format.c \
+	ft_hexa.c \
+	ft_ptr.c \
+	ft_put.c \
+	ft_str.c \
+	ft_undec.c
+	
 	
 OBJ = $(SRC:.c=.o)
 

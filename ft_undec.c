@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -11,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_undec(va_list ap, int *count)
 {
@@ -21,15 +20,3 @@ int	ft_undec(va_list ap, int *count)
 	ft_putnbr(i, count);
 	return (0);
 }
-=======
-#include "printf.h"
-
-int     ft_undec(va_list ap, int *count)
-{
-    unsigned int i;
-
-    i = va_arg(ap , unsigned int);
-	ft_putnbr(i, &count);
-    return (0);
-}
->>>>>>> 6fdbc08c28e413eaf52e51e4a9076ae43eeca702

@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
-void	ft_convermin(long long n, char *base, int *count)
+void	ft_convermin(long long int n, char *base, int *count)
 {
 	if (n < 0)
 	{
@@ -56,14 +56,14 @@ void	ft_convermaj(long long n, char *base, int *count)
 	}
 }
 
-void	ft_converptr(unsigned long long n, char *base, int *count)
+void	ft_converptr(uintptr_t n, char *base, int *count)
 {
-	if (n < 0)
+	/*if (n < 0)
 	{
 		ft_putchar('-', count);
 		ft_converptr(n * (-1), base, count);
 	}
-	else if (n >= 16)
+	else */if (n >= 16)
 	{
 		ft_converptr(n / 16, base, count);
 		ft_converptr(n % 16, base, count);

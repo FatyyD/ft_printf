@@ -10,14 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
-void	ft_ptr(va_list ap, char *format, int *count)
+int	ft_ptr(va_list ap, int *count)
 {
-	int i;
+	void *i;
 
-	i = va_arg(ap, int);
+	i = va_arg(ap, void *);
 	ft_putstr("Ox", count);
-	ft_converptr((unsigned long long)i, "0123456789abcdef", count);
+	ft_converptr((uintptr_t)i, "0123456789abcdef", count);
 	return (0);
 }
