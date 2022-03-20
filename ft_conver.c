@@ -6,7 +6,7 @@
 /*   By: fadiallo <fadiallo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 18:06:56 by fadiallo          #+#    #+#             */
-/*   Updated: 2022/03/14 19:49:49 by fadiallo         ###   ########.fr       */
+/*   Updated: 2022/03/20 17:23:32 by fadiallo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,12 +58,7 @@ void	ft_convermaj(long long n, char *base, int *count)
 
 void	ft_converptr(uintptr_t n, char *base, int *count)
 {
-	/*if (n < 0)
-	{
-		ft_putchar('-', count);
-		ft_converptr(n * (-1), base, count);
-	}
-	else */if (n >= 16)
+	if (n >= 16)
 	{
 		ft_converptr(n / 16, base, count);
 		ft_converptr(n % 16, base, count);
